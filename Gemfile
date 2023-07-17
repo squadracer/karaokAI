@@ -74,4 +74,4 @@ group :test do
   gem "webdrivers"
 end
 
-gem "random-word"
+gem 'httparty'

@@ -18,5 +18,8 @@ module KaraokAI
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.adjectives = File.readlines('app/assets/data/adjs.txt').map(&:strip)
+    config.nouns = File.readlines('app/assets/data/nouns.txt').map(&:strip)
   end
 end
