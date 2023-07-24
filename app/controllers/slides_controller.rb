@@ -1,6 +1,11 @@
 class SlidesController < ApplicationController
   def index
-    @random_ajd = Rails.application.config.adjectives.sample
-    @random_noun = Rails.application.config.nouns.sample
+    @image_url = Image.last&.url
+    @prompt = Image.last&.prompt
+  end
+
+  def start
+    GenerateImages.perform_async
+    redirect_to :root
   end
 end
