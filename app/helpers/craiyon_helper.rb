@@ -10,6 +10,6 @@ module CraiyonHelper
       token: nil,
       version: "35s5hfwn9n78gb06"
     }.to_json, headers: {"Content-type" => "application/json"}, timeout: 300)
-    IMG_URL + response["images"][0]
+    IMG_URL + response["images"]&.first
   end
 end

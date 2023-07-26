@@ -1,6 +1,10 @@
-<div class="flex flex-col">
-  <h1>SlideKaraokAI</h1>
+<div class="flex flex-col gap-16 justify-center">
+  <div class="flex flex-col justify-center gap-4">
+    <h1 class="text-4xl font-black text-slate-50">SlideKaraokAI</h1>
+    <a class="bg-slate-100 rounded p-2" href=<%= start_url%>>Launch <%= GenerateImagesJob::BATCH_SIZE %> minutes of image generation</a>
+  </div>
 
-  <p><%= @prompt %></p>
   <img src=<%= @image_url %>>
+
+  <a class="bg-slate-100 rounded p-2 text-center" href=<%= slides_url%>>Next slide -></a>
 </div>

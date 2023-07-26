@@ -75,3 +75,4 @@ group :test do
 end
 
 gem 'httparty'
+gem "sidekiq", "~> 7.1"
